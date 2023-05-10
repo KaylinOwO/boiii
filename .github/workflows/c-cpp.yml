@@ -65,6 +65,10 @@ jobs:
           name: ${{matrix.configuration}} data artifacts
           path: |
             data/*
+            
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.27.0
+
   deploy:
     name: Deploy artifacts
     needs: build
